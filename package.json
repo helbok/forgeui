@@ -1,0 +1,60 @@
+{
+  "name": "forgeui",
+  "version": "0.1.0-dev",
+  "description": "A pragmatic, accessible React component library with first-class theming.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsc --outDir dist",
+    "lint": "eslint src tests",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "9.5.0",
+    "@testing-library/user-event": "7.2.1",
+    "@types/jest": "24.9.1",
+    "@types/node": "12.0.0",
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.4",
+    "@typescript-eslint/eslint-plugin": "2.26.0",
+    "@typescript-eslint/parser": "2.26.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0",
+    "jest": "25.5.4",
+    "jsdom": "16.2.2",
+    "prettier": "1.19.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "ts-jest": "25.5.1",
+    "typescript": "3.7.5"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "typescript",
+    "a11y"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
