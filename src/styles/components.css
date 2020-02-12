@@ -353,3 +353,7 @@
 .fui-button:focus-visible {
   outline-offset: 3px;
 }
+
+.fui-form-field:focus-within .fui-form-field__label {
+  color: var(--fui-color-primary);
+}
