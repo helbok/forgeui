@@ -3,6 +3,7 @@ export const Keys = {
   Escape: "Escape",
   Tab: "Tab",
   Space: " ",
+  Backspace: "Backspace",
   ArrowDown: "ArrowDown",
   ArrowUp: "ArrowUp",
   ArrowLeft: "ArrowLeft",
