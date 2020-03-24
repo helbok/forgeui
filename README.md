@@ -37,6 +37,16 @@ function App() {
 
 See [docs/components.md](docs/components.md) for the component reference and
 [HISTORY.md](HISTORY.md) for the simulated timeline.
+
+## Accessibility
+
+All components are built to be operable by keyboard and screen readers:
+
+* Focusable elements expose visible `:focus-visible` outlines.
+* Overlays set `role`, `aria-modal` and manage Escape and outside clicks.
+* Icons and spinners expose `aria-label` and `role="status"` where needed.
+
+If you find an accessibility gap, please open an issue.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
