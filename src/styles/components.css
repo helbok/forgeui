@@ -357,3 +357,7 @@
 .fui-form-field:focus-within .fui-form-field__label {
   color: var(--fui-color-primary);
 }
+
+.fui-card__header {
+  font-size: 15px;
+}
