@@ -14,6 +14,10 @@ export const Keys = {
 
 export type Key = (typeof Keys)[keyof typeof Keys];
 
+export function isModified(event: KeyboardEvent): boolean {
+  return event.altKey || event.ctrlKey || event.metaKey;
+}
+
 export function isKey(event: KeyboardEvent, key: Key): boolean {
   return event.key === key;
 }
