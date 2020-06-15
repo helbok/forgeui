@@ -361,3 +361,7 @@
 .fui-card__header {
   font-size: 15px;
 }
+
+.fui-tabs__list {
+  overflow-x: auto;
+}
