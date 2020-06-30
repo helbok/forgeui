@@ -1,6 +1,6 @@
 import type { Ref, RefCallback } from "react";
 
-export function mergeRefs<T>(
+export function mergeRefs<T extends HTMLElement>(
   ...refs: Array<Ref<T> | undefined>
 ): RefCallback<T> {
   return (value) => {
