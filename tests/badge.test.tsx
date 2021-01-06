@@ -13,3 +13,10 @@ describe("Badge", () => {
     expect(screen.getByText("Failed")).toHaveClass("fui-badge--danger");
   });
 });
+
+describe("renders info variant", () => {
+  it("applies the info class", () => {
+    render(<Badge variant="info">i</Badge>);
+    expect(screen.getByText("i")).toHaveClass("fui-badge--info");
+  });
+});
