@@ -18,3 +18,10 @@ describe("Form", () => {
     expect(screen.getByText("Required")).toBeInTheDocument();
   });
 });
+
+describe("renders submit button", () => {
+  it("supports submit buttons", () => {
+    render(<Form><button type="submit">Send</button></Form>);
+    expect(screen.getByRole("button", { name: "Send" })).toHaveAttribute("type", "submit");
+  });
+});
