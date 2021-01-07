@@ -22,3 +22,10 @@ describe("Button", () => {
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 });
+
+describe("renders ghost variant", () => {
+  it("applies the ghost class", () => {
+    render(<Button variant="ghost">G</Button>);
+    expect(screen.getByRole("button")).toHaveClass("fui-button--ghost");
+  });
+});
