@@ -47,6 +47,16 @@ All components are built to be operable by keyboard and screen readers:
 * Icons and spinners expose `aria-label` and `role="status"` where needed.
 
 If you find an accessibility gap, please open an issue.
+
+## Testing
+
+Tests run with Jest and React Testing Library:
+
+```sh
+npm test
+```
+
+Coverage is collected with `--coverage` and reported in the terminal.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
