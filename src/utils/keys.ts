@@ -10,6 +10,8 @@ export const Keys = {
   ArrowRight: "ArrowRight",
   Home: "Home",
   End: "End",
+  PageUp: "PageUp",
+  PageDown: "PageDown",
 } as const;
 
 export type Key = (typeof Keys)[keyof typeof Keys];
