@@ -29,3 +29,10 @@ describe("renders ghost variant", () => {
     expect(screen.getByRole("button")).toHaveClass("fui-button--ghost");
   });
 });
+
+describe("sets type submit", () => {
+  it("forwards the type attribute", () => {
+    render(<Button type="submit">Send</Button>);
+    expect(screen.getByRole("button")).toHaveAttribute("type", "submit");
+  });
+});
