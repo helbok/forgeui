@@ -9,3 +9,9 @@ describe("cn", () => {
     expect(cn("a", false && "b", { c: true, d: false })).toBe("a c");
   });
 });
+
+describe("supports number values", () => {
+  it("keeps numeric classes", () => {
+    expect(cn("m-1", 2)).toBe("m-1 2");
+  });
+});
