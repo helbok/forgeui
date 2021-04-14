@@ -1,6 +1,6 @@
 {
   "name": "forgeui",
-  "version": "0.5.0-dev",
+  "version": "0.5.0",
   "description": "A pragmatic, accessible React component library with first-class theming.",
   "license": "MIT",
   "main": "dist/index.js",
