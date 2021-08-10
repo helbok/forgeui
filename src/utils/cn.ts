@@ -27,5 +27,6 @@ function toValue(mix: ClassValue): string {
 }
 
 export function cn(...inputs: ClassValue[]): string {
-  return inputs.map(toValue).filter(Boolean).join(" ");
+  const parts = inputs.map(toValue).filter(Boolean);
+  return parts.join(" ");
 }
