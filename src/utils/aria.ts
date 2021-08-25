@@ -1,6 +1,6 @@
 /** Map an error id to the ARIA attributes a control should carry. */
 export function ariaErrorMessage(id: string): Record<string, string> {
-  return { "aria-describedby": id, "aria-invalid": "true" };
+  return { "aria-describedby": id, "aria-invalid": "true" as const };
 }
 
 export function prefersReducedMotion(): boolean {
