@@ -36,3 +36,10 @@ describe("sets type submit", () => {
     expect(screen.getByRole("button")).toHaveAttribute("type", "submit");
   });
 });
+
+describe("renders danger class", () => {
+  it("applies danger styling", () => {
+    render(<Button variant="danger">D</Button>);
+    expect(screen.getByRole("button")).toHaveClass("fui-button--danger");
+  });
+});
