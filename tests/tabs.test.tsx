@@ -21,3 +21,10 @@ describe("Tabs", () => {
     expect(screen.getByText("Content B")).toBeInTheDocument();
   });
 });
+
+describe("marks selected tab", () => {
+  it("marks aria-selected", () => {
+    render(<Tabs items={items} />);
+    expect(screen.getByRole("tab", { name: "Tab A" })).toHaveAttribute("aria-selected", "true");
+  });
+});
