@@ -15,3 +15,9 @@ describe("supports number values", () => {
     expect(cn("m-1", 2)).toBe("m-1 2");
   });
 });
+
+describe("supports object conditions", () => {
+  it("applies conditional objects", () => {
+    expect(cn({ a: true, b: false })).toBe("a");
+  });
+});
