@@ -57,6 +57,14 @@ npm test
 ```
 
 Coverage is collected with `--coverage` and reported in the terminal.
+
+## Keyboard shortcuts
+
+* `Enter` / `Space` — activate buttons and tabs.
+* `Escape` — dismiss modals and toasts.
+* `Arrow` keys — move between tabs and list options.
+
+These behaviors are implemented in the component internals and covered by tests.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
