@@ -10,6 +10,7 @@ export function prefersReducedMotion(): boolean {
   );
 }
 
+/** True when the event target lives inside the given element. */
 export function isEventFromChild(event: Event, ref: HTMLElement | null): boolean {
   return ref != null && ref.contains(event.target as Node);
 }
