@@ -28,3 +28,11 @@ describe("marks selected tab", () => {
     expect(screen.getByRole("tab", { name: "Tab A" })).toHaveAttribute("aria-selected", "true");
   });
 });
+
+describe("disables disabled tabs", () => {
+  it("disables items", () => {
+    const d = [{ id: "a", label: "A", content: "CA" }, { id: "b", label: "B", content: "CB", disabled: true }];
+    render(<Tabs items={d} />);
+    expect(screen.getByRole("tab", { name: "B" })).toBeDisabled();
+  });
+});
