@@ -19,3 +19,9 @@ forgeui ships a focused set of accessible, themeable React components.
 
 Every component is built with React and TypeScript, supports
 `React.forwardRef`, and honours `prefers-reduced-motion` where relevant.
+
+## Composition
+
+Components accept `className` and spread remaining props onto the root
+element, so they compose with plain HTML attributes and third-party
+libraries without wrapper components.
