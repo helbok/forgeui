@@ -17,3 +17,10 @@ describe("Toast", () => {
     expect(screen.getByText("Show")).toBeInTheDocument();
   });
 });
+
+describe("dismisses toasts", () => {
+  it("renders the toaster container", () => {
+    render(<ToastProvider><span>x</span></ToastProvider>);
+    expect(document.querySelector(".fui-toaster")).toBeInTheDocument();
+  });
+});
