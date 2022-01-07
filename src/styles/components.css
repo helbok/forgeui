@@ -373,3 +373,7 @@
 .fui-button--lg {
   min-width: 120px;
 }
+
+.fui-select {
+  transition: border-color 120ms ease;
+}
