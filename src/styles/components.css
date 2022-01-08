@@ -377,3 +377,7 @@
 .fui-select {
   transition: border-color 120ms ease;
 }
+
+.fui-modal-overlay {
+  overflow-y: auto;
+}
