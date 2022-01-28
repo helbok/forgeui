@@ -3,6 +3,7 @@ export type ThemeMode = "light" | "dark";
 export interface ThemeColors {
   primary: string;
   primaryHover: string;
+  primaryActive: string;
   background: string;
   surface: string;
   border: string;
@@ -43,6 +44,7 @@ export const themes: Record<ThemeMode, Theme> = {
     colors: {
       primary: "#4f46e5",
       primaryHover: "#4338ca",
+      primaryActive: "#3730a3",
       background: "#ffffff",
       surface: "#f8fafc",
       border: "#e2e8f0",
@@ -63,6 +65,7 @@ export const themes: Record<ThemeMode, Theme> = {
     colors: {
       primary: "#818cf8",
       primaryHover: "#6366f1",
+      primaryActive: "#a5b4fc",
       background: "#0f172a",
       surface: "#1e293b",
       border: "#334155",
