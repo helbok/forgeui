@@ -43,3 +43,10 @@ describe("renders danger class", () => {
     expect(screen.getByRole("button")).toHaveClass("fui-button--danger");
   });
 });
+
+describe("Button loading state", () => {
+  it("disables the button while loading", () => {
+    render(<Button loading>Save</Button>);
+    expect(screen.getByRole("button")).toBeDisabled();
+  });
+});
