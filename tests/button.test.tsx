@@ -50,3 +50,10 @@ describe("Button loading state", () => {
     expect(screen.getByRole("button")).toBeDisabled();
   });
 });
+
+describe("Button icon slots", () => {
+  it("renders icons alongside children", () => {
+    render(<Button leftIcon={<span>+</span>}>New</Button>);
+    expect(screen.getByText("+")).toBeInTheDocument();
+  });
+});
