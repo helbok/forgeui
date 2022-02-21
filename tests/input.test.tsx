@@ -13,3 +13,10 @@ describe("Input", () => {
     expect(screen.getByRole("textbox")).toHaveAttribute("aria-invalid", "true");
   });
 });
+
+describe("Input error message", () => {
+  it("links the error message via aria", () => {
+    render(<Input invalid errorMessage="Too short" />);
+    expect(screen.getByRole("textbox")).toHaveAttribute("aria-invalid", "true");
+  });
+});
