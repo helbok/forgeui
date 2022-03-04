@@ -17,3 +17,10 @@ describe("Select", () => {
     expect(screen.getByRole("option", { name: "Pick one" })).toBeInTheDocument();
   });
 });
+
+describe("Select options array", () => {
+  it("renders options from the options prop", () => {
+    render(<Select options={[{ label: "One", value: "1" }]} />);
+    expect(screen.getByRole("option", { name: "One" })).toBeInTheDocument();
+  });
+});
