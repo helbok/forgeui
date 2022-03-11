@@ -16,3 +16,10 @@ describe("Card", () => {
     expect(screen.getByText("Footer")).toBeInTheDocument();
   });
 });
+
+describe("Card polymorphic as", () => {
+  it("renders as a custom element", () => {
+    render(<Card as="section">Body</Card>);
+    expect(screen.getByRole("region").textContent).toBe("Body");
+  });
+});
