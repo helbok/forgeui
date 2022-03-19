@@ -36,3 +36,10 @@ describe("disables disabled tabs", () => {
     expect(screen.getByRole("tab", { name: "B" })).toBeDisabled();
   });
 });
+
+describe("Tabs keyboard navigation", () => {
+  it("marks the active tab", () => {
+    render(<Tabs items={items} />);
+    expect(screen.getByRole("tab", { name: "Tab A" })).toHaveAttribute("aria-selected", "true");
+  });
+});
