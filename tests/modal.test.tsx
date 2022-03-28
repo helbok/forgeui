@@ -19,3 +19,13 @@ describe("Modal", () => {
     expect(screen.getByText("Body")).toBeInTheDocument();
   });
 });
+
+describe("Modal escape key", () => {
+  it("closes on Escape", async () => {
+    const user = userEvent.setup();
+    const onClose = jest.fn();
+    render(<Modal open onClose={onClose}>Body</Modal>);
+    await user.keyboard("{Escape}");
+    expect(onClose).toHaveBeenCalled();
+  });
+});
