@@ -18,3 +18,10 @@ describe("Table", () => {
     expect(screen.getByText("Ada")).toBeInTheDocument();
   });
 });
+
+describe("Table empty state", () => {
+  it("renders the empty message", () => {
+    render(<Table data={[]} columns={[{ key: "name", header: "Name" }]} rowKey={(r) => r.id} />);
+    expect(screen.getByText("No rows to display.")).toBeInTheDocument();
+  });
+});
