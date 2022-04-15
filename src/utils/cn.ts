@@ -7,7 +7,7 @@ export type ClassValue =
   | Record<string, boolean | undefined>
   | ClassValue[];
 
-function toValue(mix: ClassValue): string {
+function toValue(mix: ClassValue, depth: number): string {
   if (typeof mix === "string" || typeof mix === "number") {
     return String(mix);
   }
@@ -15,7 +15,7 @@ function toValue(mix: ClassValue): string {
     return "";
   }
   if (Array.isArray(mix)) {
-    return mix.map(toValue).filter(Boolean).join(" ");
+    return mix.map((item) => toValue(item, depth + 1)).filter(Boolean).join(" ");
   }
   if (typeof mix === "object") {
     return Object.entries(mix)
@@ -27,6 +27,5 @@ function toValue(mix: ClassValue): string {
 }
 
 export function cn(...inputs: ClassValue[]): string {
-  const parts = inputs.map(toValue).filter(Boolean);
-  return parts.join(" ");
+  return inputs.map((input) => toValue(input, 0)).filter(Boolean).join(" ");
 }
