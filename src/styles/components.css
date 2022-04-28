@@ -382,3 +382,7 @@
 .fui-modal-overlay {
   overflow-y: auto;
 }
+
+.fui-button--full {
+  width: 100%;
+}
