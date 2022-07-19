@@ -386,3 +386,7 @@
 .fui-button--full {
   width: 100%;
 }
+
+[data-theme="dark"] .fui-card {
+  background: var(--fui-color-surface);
+}
