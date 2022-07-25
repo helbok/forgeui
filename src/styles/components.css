@@ -81,7 +81,7 @@
   background: var(--fui-color-background);
 }
 
-.fui-input:focus {
+.fui-input:focus-visible {
   outline: none;
   border-color: var(--fui-color-primary);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--fui-color-primary) 20%, transparent);
