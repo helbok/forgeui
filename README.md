@@ -65,6 +65,18 @@ Coverage is collected with `--coverage` and reported in the terminal.
 * `Arrow` keys — move between tabs and list options.
 
 These behaviors are implemented in the component internals and covered by tests.
+
+## FAQ
+
+**Does forgeui require a CSS-in-JS runtime?**
+
+No. Styling uses plain CSS custom properties, so there is no runtime
+dependency beyond React itself.
+
+**Can I use my own color palette?**
+
+Yes — override the `--fui-*` variables described in
+[docs/theming.md](docs/theming.md).
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
