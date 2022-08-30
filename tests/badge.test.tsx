@@ -20,3 +20,10 @@ describe("renders info variant", () => {
     expect(screen.getByText("i")).toHaveClass("fui-badge--info");
   });
 });
+
+describe("Badge variants", () => {
+  it("defaults to the neutral variant", () => {
+    render(<Badge>v1</Badge>);
+    expect(screen.getByText("v1")).toHaveClass("fui-badge--neutral");
+  });
+});
