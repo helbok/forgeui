@@ -8,3 +8,10 @@ describe("Spinner", () => {
     expect(screen.getByRole("status")).toHaveAttribute("aria-label", "Loading data");
   });
 });
+
+describe("Spinner sizes", () => {
+  it("applies the size class", () => {
+    render(<Spinner size="lg" />);
+    expect(screen.getByRole("status")).toHaveClass("fui-spinner--lg");
+  });
+});
