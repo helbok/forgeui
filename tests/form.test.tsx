@@ -25,3 +25,10 @@ describe("renders submit button", () => {
     expect(screen.getByRole("button", { name: "Send" })).toHaveAttribute("type", "submit");
   });
 });
+
+describe("Form noValidate", () => {
+  it("renders without native validation", () => {
+    render(<Form aria-label="x" />);
+    expect(screen.getByRole("form")).toHaveAttribute("novalidate");
+  });
+});
