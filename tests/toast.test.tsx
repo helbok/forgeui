@@ -24,3 +24,10 @@ describe("dismisses toasts", () => {
     expect(document.querySelector(".fui-toaster")).toBeInTheDocument();
   });
 });
+
+describe("Toast auto dismiss", () => {
+  it("renders toast messages", () => {
+    render(<ToastProvider><Trigger message="Saved" /></ToastProvider>);
+    expect(screen.getByText("Show")).toBeInTheDocument();
+  });
+});
