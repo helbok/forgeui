@@ -17,3 +17,11 @@ describe("ThemeProvider", () => {
     expect(document.documentElement).toHaveAttribute("data-theme", "dark");
   });
 });
+
+describe("Theme preference storage", () => {
+  it("reads the stored preference", () => {
+    window.localStorage.setItem("forgeui-theme", "dark");
+    render(<ThemeProvider><Probe /></ThemeProvider>);
+    expect(document.documentElement).toHaveAttribute("data-theme", "dark");
+  });
+});
