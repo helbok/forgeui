@@ -14,3 +14,11 @@ describe("useDebounce", () => {
     expect(screen.getByText("hello")).toBeInTheDocument();
   });
 });
+
+describe("useDebounce lag", () => {
+  it("updates after the delay", () => {
+    const { rerender } = render(<Probe value="a" />);
+    rerender(<Probe value="b" />);
+    expect(screen.getByText("a")).toBeInTheDocument();
+  });
+});
