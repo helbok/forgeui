@@ -43,7 +43,7 @@ export const Modal = ({ open, onClose, title, children, footer }: ModalProps) =>
       >
         <div className="fui-modal__header">
           <h2 className="fui-modal__title">{title}</h2>
-          <button type="button" aria-label="Close" onClick={onClose}>
+          <button type="button" aria-label="Close" className="fui-modal__close" onClick={onClose}>
             &times;
           </button>
         </div>
