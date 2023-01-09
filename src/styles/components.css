@@ -391,3 +391,11 @@
 [data-theme="dark"] .fui-card {
   background: var(--fui-color-surface);
 }
+
+.fui-toast--success {
+  border-color: var(--fui-color-success);
+}
+
+.fui-toast--error {
+  border-color: var(--fui-color-danger);
+}
