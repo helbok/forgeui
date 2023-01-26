@@ -77,6 +77,21 @@ dependency beyond React itself.
 
 Yes — override the `--fui-*` variables described in
 [docs/theming.md](docs/theming.md).
+
+## Architecture
+
+```
+src/
+  components/   presentational components
+  hooks/        reusable state and interaction hooks
+  styles/       CSS custom-property tokens and component styles
+  theme/        runtime theme object consumed by ThemeProvider
+  utils/        cn, mergeRefs, aria and keyboard helpers
+```
+
+Components are stateless where possible and accept controlled props, keeping
+behavior predictable and easy to test. Accessibility state is expressed with
+ARIA attributes directly on the rendered elements.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
