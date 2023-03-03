@@ -57,3 +57,10 @@ describe("Button icon slots", () => {
     expect(screen.getByText("+")).toBeInTheDocument();
   });
 });
+
+describe("Button full width", () => {
+  it("stretches when fullWidth is set", () => {
+    render(<Button fullWidth>Save</Button>);
+    expect(screen.getByRole("button")).toHaveClass("fui-button--full");
+  });
+});
