@@ -20,3 +20,10 @@ describe("Input error message", () => {
     expect(screen.getByRole("textbox")).toHaveAttribute("aria-invalid", "true");
   });
 });
+
+describe("Input native types", () => {
+  it("supports the number type", () => {
+    render(<Input type="number" />);
+    expect(screen.getByRole("spinbutton")).toBeInTheDocument();
+  });
+});
