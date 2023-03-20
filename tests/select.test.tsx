@@ -24,3 +24,10 @@ describe("Select options array", () => {
     expect(screen.getByRole("option", { name: "One" })).toBeInTheDocument();
   });
 });
+
+describe("Select invalid state", () => {
+  it("marks invalid selects", () => {
+    render(<Select invalid />);
+    expect(screen.getByRole("combobox")).toHaveAttribute("aria-invalid", "true");
+  });
+});
