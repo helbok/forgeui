@@ -29,3 +29,10 @@ describe("Modal escape key", () => {
     expect(onClose).toHaveBeenCalled();
   });
 });
+
+describe("Modal title", () => {
+  it("renders the title", () => {
+    render(<Modal open onClose={() => {}} title="Confirm">Body</Modal>);
+    expect(screen.getByText("Confirm")).toBeInTheDocument();
+  });
+});
