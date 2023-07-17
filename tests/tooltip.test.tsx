@@ -12,3 +12,10 @@ describe("Tooltip", () => {
     expect(screen.getByRole("tooltip")).toHaveTextContent("More info");
   });
 });
+
+describe("renders default placement", () => {
+  it("defaults to top placement", () => {
+    render(<Tooltip label="x"><button>B</button></Tooltip>);
+    expect(screen.getByText("B").parentElement).toHaveAttribute("data-placement", "top");
+  });
+});
