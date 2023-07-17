@@ -64,3 +64,10 @@ describe("Button full width", () => {
     expect(screen.getByRole("button")).toHaveClass("fui-button--full");
   });
 });
+
+describe("renders with id", () => {
+  it("accepts an id", () => {
+    render(<Button id="save-btn">Save</Button>);
+    expect(screen.getByRole("button")).toHaveAttribute("id", "save-btn");
+  });
+});
