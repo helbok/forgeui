@@ -22,3 +22,14 @@ describe("useDebounce lag", () => {
     expect(screen.getByText("a")).toBeInTheDocument();
   });
 });
+
+describe("useDisclosure toggles", () => {
+  it("exposes open and close", () => {
+    function Probe() {
+      const { isOpen, open, close } = useDisclosure();
+      return <span data-open={isOpen}><button onClick={open}>o</button><button onClick={close}>c</button></span>;
+    }
+    render(<Probe />);
+    expect(screen.getByText("o")).toBeInTheDocument();
+  });
+});
