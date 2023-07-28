@@ -400,3 +400,11 @@
 .fui-toast--error {
   border-color: var(--fui-color-danger);
 }
+
+.fui-button--danger {
+  color: #fff;
+  background: var(--fui-color-danger);
+}
+.fui-button--danger:hover:not(:disabled) {
+  background: var(--fui-color-danger-hover);
+}
