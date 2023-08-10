@@ -92,6 +92,13 @@ src/
 Components are stateless where possible and accept controlled props, keeping
 behavior predictable and easy to test. Accessibility state is expressed with
 ARIA attributes directly on the rendered elements.
+
+## Troubleshooting
+
+* **Styles missing?** Import `forgeui/styles.css` in your entry file.
+* **Dark mode not switching?** Ensure a `ThemeProvider` wraps your app and the
+  `data-theme` attribute is applied to `<html>`.
+* **Type errors?** Upgrade to the latest `typescript` and re-run `tsc`.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
