@@ -19,3 +19,10 @@ describe("renders default placement", () => {
     expect(screen.getByText("B").parentElement).toHaveAttribute("data-placement", "top");
   });
 });
+
+describe("hides by default", () => {
+  it("does not show the label initially", () => {
+    render(<Tooltip label="secret"><button>B</button></Tooltip>);
+    expect(screen.queryByText("secret")).not.toBeInTheDocument();
+  });
+});
