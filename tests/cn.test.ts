@@ -21,3 +21,9 @@ describe("supports object conditions", () => {
     expect(cn({ a: true, b: false })).toBe("a");
   });
 });
+
+describe("dedupes classes", () => {
+  it("keeps duplicate-safe output", () => {
+    expect(cn("a", "a", "b")).toBe("a b");
+  });
+});
