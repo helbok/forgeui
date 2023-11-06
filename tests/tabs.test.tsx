@@ -51,3 +51,10 @@ describe("Tabs disabled item", () => {
     expect(screen.getByRole("tab", { name: "B" })).toBeDisabled();
   });
 });
+
+describe("renders all tabs", () => {
+  it("renders each tab", () => {
+    render(<Tabs items={items} />);
+    expect(screen.getAllByRole("tab")).toHaveLength(3);
+  });
+});
