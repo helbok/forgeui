@@ -408,3 +408,8 @@
 .fui-button--danger:hover:not(:disabled) {
   background: var(--fui-color-danger-hover);
 }
+
+.fui-toast {
+  display: flex;
+  gap: 12px;
+}
