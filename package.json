@@ -42,7 +42,8 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "ts-jest": "25.5.1",
-    "typescript": "3.9.7"
+    "typescript": "3.9.7",
+    "husky": "4.3.8"
   },
   "engines": {
     "node": ">=14"
