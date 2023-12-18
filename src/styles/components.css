@@ -413,3 +413,8 @@
   display: flex;
   gap: 12px;
 }
+
+.fui-badge--subtle {
+  background: transparent;
+  border: 1px solid var(--fui-color-border);
+}
