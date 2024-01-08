@@ -229,7 +229,7 @@
 
 .fui-modal {
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   border-radius: var(--fui-radius-lg);
   background: var(--fui-color-background);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
