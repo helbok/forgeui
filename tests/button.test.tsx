@@ -71,3 +71,13 @@ describe("renders with id", () => {
     expect(screen.getByRole("button")).toHaveAttribute("id", "save-btn");
   });
 });
+
+describe("Button disabled state", () => {
+  it("does not fire clicks when disabled", async () => {
+    const user = userEvent.setup();
+    const onClick = jest.fn();
+    render(<Button disabled onClick={onClick}>Save</Button>);
+    await user.click(screen.getByRole("button"));
+    expect(onClick).not.toHaveBeenCalled();
+  });
+});
