@@ -26,3 +26,10 @@ describe("hides by default", () => {
     expect(screen.queryByText("secret")).not.toBeInTheDocument();
   });
 });
+
+describe("Tooltip placement", () => {
+  it("sets the placement attribute", () => {
+    render(<Tooltip label="x" placement="left"><button>B</button></Tooltip>);
+    expect(screen.getByRole("tooltip").parentElement).toHaveAttribute("data-placement", "left");
+  });
+});
