@@ -25,3 +25,10 @@ describe("Table empty state", () => {
     expect(screen.getByText("No rows to display.")).toBeInTheDocument();
   });
 });
+
+describe("Table row keys", () => {
+  it("renders a row per item", () => {
+    render(<Table data={[{ id: 1, name: "A" }, { id: 2, name: "B" }]} columns={[{ key: "name", header: "Name" }]} rowKey={(r) => r.id} />);
+    expect(screen.getAllByRole("row")).toHaveLength(3);
+  });
+});
