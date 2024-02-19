@@ -33,3 +33,14 @@ describe("useDisclosure toggles", () => {
     expect(screen.getByText("o")).toBeInTheDocument();
   });
 });
+
+describe("useLocalStorage persistence", () => {
+  it("persists the value", () => {
+    function Probe() {
+      const [value, setValue] = useLocalStorage("k", 0);
+      return <button onClick={() => setValue(1)}>{value}</button>;
+    }
+    render(<Probe />);
+    expect(screen.getByText("0")).toBeInTheDocument();
+  });
+});
