@@ -10,18 +10,28 @@ export interface TabItem {
 
 export interface TabsProps {
   items: TabItem[];
+  activeId?: string;
   defaultActiveId?: string;
   onChange?: (id: string) => void;
 }
 
-export const Tabs = ({ items, defaultActiveId, onChange }: TabsProps) => {
+export const Tabs = ({
+  items,
+  activeId: controlledId,
+  defaultActiveId,
+  onChange,
+}: TabsProps) => {
   const baseId = useId();
-  const [activeId, setActiveId] = useState(
+  const [internalId, setInternalId] = useState(
     defaultActiveId ?? items.find((item) => !item.disabled)?.id ?? items[0]?.id,
   );
+  const isControlled = controlledId !== undefined;
+  const activeId = isControlled ? controlledId : internalId;
 
   const select = (id: string) => {
-    setActiveId(id);
+    if (!isControlled) {
+      setInternalId(id);
+    }
     onChange?.(id);
   };
 
