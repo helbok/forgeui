@@ -58,3 +58,10 @@ describe("renders all tabs", () => {
     expect(screen.getAllByRole("tab")).toHaveLength(3);
   });
 });
+
+describe("Tabs controlled mode", () => {
+  it("honours the controlled activeId", () => {
+    render(<Tabs items={items} activeId="b" />);
+    expect(screen.getByText("Content B")).toBeInTheDocument();
+  });
+});
