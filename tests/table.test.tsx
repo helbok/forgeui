@@ -32,3 +32,13 @@ describe("Table row keys", () => {
     expect(screen.getAllByRole("row")).toHaveLength(3);
   });
 });
+
+describe("Table sorting", () => {
+  it("sorts rows ascending", async () => {
+    const user = userEvent.setup();
+    const rows = [{ id: 1, name: "B" }, { id: 2, name: "A" }];
+    render(<Table data={rows} columns={[{ key: "name", header: "Name", sortable: true, sortValue: (r) => r.name }]} rowKey={(r) => r.id} />);
+    await user.click(screen.getByRole("button", { name: "Name" }));
+    expect(screen.getAllByRole("row")[1]).toHaveTextContent("A");
+  });
+});
