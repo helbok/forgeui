@@ -27,3 +27,10 @@ describe("Badge variants", () => {
     expect(screen.getByText("v1")).toHaveClass("fui-badge--neutral");
   });
 });
+
+describe("Badge subtle variant", () => {
+  it("applies the subtle variant", () => {
+    render(<Badge variant="neutral">ok</Badge>);
+    expect(screen.getByText("ok")).toHaveClass("fui-badge--neutral");
+  });
+});
