@@ -13,12 +13,14 @@
     "**/*.css"
   ],
   "scripts": {
-    "build": "tsc --outDir dist",
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap",
     "lint": "eslint src tests",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "dev": "tsup src/index.ts --watch",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
