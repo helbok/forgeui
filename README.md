@@ -99,6 +99,12 @@ ARIA attributes directly on the rendered elements.
 * **Dark mode not switching?** Ensure a `ThemeProvider` wraps your app and the
   `data-theme` attribute is applied to `<html>`.
 * **Type errors?** Upgrade to the latest `typescript` and re-run `tsc`.
+
+## Releases
+
+This project uses [Semantic Versioning](https://semver.org/). See
+[CHANGELOG.md](CHANGELOG.md) for release notes and
+[docs/migration.md](docs/migration.md) for upgrade guidance.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
