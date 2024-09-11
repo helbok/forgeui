@@ -25,3 +25,10 @@ describe("Theme preference storage", () => {
     expect(document.documentElement).toHaveAttribute("data-theme", "dark");
   });
 });
+
+describe("Theme system preference", () => {
+  it("resolves system preference", () => {
+    render(<ThemeProvider defaultPreference="system"><Probe /></ThemeProvider>);
+    expect(document.documentElement).toHaveAttribute("data-theme");
+  });
+});
