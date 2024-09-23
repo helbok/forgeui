@@ -36,3 +36,10 @@ describe("Modal title", () => {
     expect(screen.getByText("Confirm")).toBeInTheDocument();
   });
 });
+
+describe("Modal footer", () => {
+  it("renders the footer", () => {
+    render(<Modal open onClose={() => {}} footer={<button>OK</button>}>Body</Modal>);
+    expect(screen.getByRole("button", { name: "OK" })).toBeInTheDocument();
+  });
+});
