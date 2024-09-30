@@ -31,3 +31,10 @@ describe("Select invalid state", () => {
     expect(screen.getByRole("combobox")).toHaveAttribute("aria-invalid", "true");
   });
 });
+
+describe("Select labelled by label", () => {
+  it("links the label to the select", () => {
+    render(<Select label="Country" />);
+    expect(screen.getByText("Country")).toBeInTheDocument();
+  });
+});
