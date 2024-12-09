@@ -81,3 +81,10 @@ describe("Button disabled state", () => {
     expect(onClick).not.toHaveBeenCalled();
   });
 });
+
+describe("renders loading state", () => {
+  it("shows a spinner when loading", () => {
+    render(<Button loading>Save</Button>);
+    expect(screen.getByRole("status")).toBeInTheDocument();
+  });
+});
