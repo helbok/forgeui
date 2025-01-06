@@ -432,3 +432,11 @@
 .fui-table__header:disabled {
   cursor: default;
 }
+
+.fui-button--success {
+  color: #fff;
+  background: var(--fui-color-success);
+}
+.fui-button--success:hover:not(:disabled) {
+  background: var(--fui-color-success-hover);
+}
