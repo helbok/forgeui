@@ -33,3 +33,10 @@ describe("Tooltip placement", () => {
     expect(screen.getByRole("tooltip").parentElement).toHaveAttribute("data-placement", "left");
   });
 });
+
+describe("renders offset", () => {
+  it("accepts an offset", () => {
+    render(<Tooltip label="x" offset={8}><button>B</button></Tooltip>);
+    expect(screen.getByText("B")).toBeInTheDocument();
+  });
+});
