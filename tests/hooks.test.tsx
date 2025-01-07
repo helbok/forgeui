@@ -44,3 +44,14 @@ describe("useLocalStorage persistence", () => {
     expect(screen.getByText("0")).toBeInTheDocument();
   });
 });
+
+describe("useClickOutside calls handler", () => {
+  it("returns a ref", () => {
+    function Probe() {
+      const ref = useClickOutside<HTMLDivElement>(() => {});
+      return <div ref={ref}>x</div>;
+    }
+    render(<Probe />);
+    expect(screen.getByText("x")).toBeInTheDocument();
+  });
+});
