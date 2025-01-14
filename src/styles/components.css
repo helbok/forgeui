@@ -440,3 +440,7 @@
 .fui-button--success:hover:not(:disabled) {
   background: var(--fui-color-success-hover);
 }
+
+.fui-input--with-prefix {
+  padding-left: 36px;
+}
