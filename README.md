@@ -105,6 +105,12 @@ ARIA attributes directly on the rendered elements.
 This project uses [Semantic Versioning](https://semver.org/). See
 [CHANGELOG.md](CHANGELOG.md) for release notes and
 [docs/migration.md](docs/migration.md) for upgrade guidance.
+
+## Migration from 1.x
+
+- React 16 is no longer supported; use React 17 or later.
+- Jest configuration was removed in favor of Vitest. Run `npm test` as before.
+- `ThemeProvider` now defaults to the system color preference.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
