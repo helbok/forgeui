@@ -23,3 +23,10 @@ describe("Card polymorphic as", () => {
     expect(screen.getByRole("region").textContent).toBe("Body");
   });
 });
+
+describe("renders actions", () => {
+  it("renders action buttons", () => {
+    render(<Card actions={<button>Go</button>}>C</Card>);
+    expect(screen.getByRole("button", { name: "Go" })).toBeInTheDocument();
+  });
+});
