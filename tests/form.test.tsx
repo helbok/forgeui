@@ -32,3 +32,10 @@ describe("Form noValidate", () => {
     expect(screen.getByRole("form")).toHaveAttribute("novalidate");
   });
 });
+
+describe("renders error message", () => {
+  it("shows validation errors", () => {
+    render(<FormField error="Required"><input /></FormField>);
+    expect(screen.getByText("Required")).toBeInTheDocument();
+  });
+});
