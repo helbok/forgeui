@@ -46,7 +46,7 @@ export function Table<T>({
   }, [data, columns, sort]);
 
   const toggleSort = (column: Column<T>) => {
-    if (!column.sortable) return;
+    if (!column.sortable || column.sortValue == null) return;
     setSort((prev) =>
       prev?.key === column.key
         ? { key: column.key, direction: prev.direction === "asc" ? "desc" : "asc" }
