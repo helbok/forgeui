@@ -444,3 +444,7 @@
 .fui-input--with-prefix {
   padding-left: 36px;
 }
+
+.fui-spinner {
+  will-change: transform;
+}
