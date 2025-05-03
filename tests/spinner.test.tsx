@@ -15,3 +15,10 @@ describe("Spinner sizes", () => {
     expect(screen.getByRole("status")).toHaveClass("fui-spinner--lg");
   });
 });
+
+describe("Spinner reduced motion", () => {
+  it("keeps the animation accessible", () => {
+    render(<Spinner />);
+    expect(screen.getByRole("status")).toHaveClass("fui-spinner--md");
+  });
+});
