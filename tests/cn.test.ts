@@ -27,3 +27,9 @@ describe("dedupes classes", () => {
     expect(cn("a", "a", "b")).toBe("a b");
   });
 });
+
+describe("cn array and object inputs", () => {
+  it("flattens nested arrays", () => {
+    expect(cn(["a", ["b"]], { c: true })).toBe("a b c");
+  });
+});
