@@ -27,3 +27,10 @@ describe("Input native types", () => {
     expect(screen.getByRole("spinbutton")).toBeInTheDocument();
   });
 });
+
+describe("Input controlled value", () => {
+  it("accepts a controlled value", () => {
+    render(<Input value="hello" onChange={() => {}} />);
+    expect(screen.getByDisplayValue("hello")).toBeInTheDocument();
+  });
+});
