@@ -8,6 +8,9 @@ export interface ButtonProps
   size?: "sm" | "md" | "lg";
   loading?: boolean;
   loadingText?: string;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
+  fullWidth?: boolean;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -17,6 +20,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size = "md",
       loading = false,
       loadingText,
+      leftIcon,
+      rightIcon,
+      fullWidth = false,
       disabled,
       children,
       className,
@@ -32,6 +38,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           "fui-button",
           `fui-button--${variant}`,
           `fui-button--${size}`,
+          fullWidth && "fui-button--full",
           className,
         )}
         {...props}
@@ -42,7 +49,11 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             {loadingText ?? children}
           </>
         ) : (
-          children
+          <>
+            {leftIcon}
+            {children}
+            {rightIcon}
+          </>
         )}
       </button>
     );
