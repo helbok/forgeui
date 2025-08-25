@@ -88,3 +88,10 @@ describe("renders loading state", () => {
     expect(screen.getByRole("status")).toBeInTheDocument();
   });
 });
+
+describe("Button icon-only rendering", () => {
+  it("renders only the icon when no children", () => {
+    render(<Button leftIcon={<span>+</span>} aria-label="Add" />);
+    expect(screen.getByRole("button", { name: "Add" })).toBeInTheDocument();
+  });
+});
