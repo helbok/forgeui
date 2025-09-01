@@ -95,3 +95,10 @@ describe("Button icon-only rendering", () => {
     expect(screen.getByRole("button", { name: "Add" })).toBeInTheDocument();
   });
 });
+
+describe("Button full width modifier", () => {
+  it("applies the full width class", () => {
+    render(<Button fullWidth>Save</Button>);
+    expect(screen.getByRole("button")).toHaveClass("fui-button--full");
+  });
+});
