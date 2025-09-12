@@ -42,3 +42,10 @@ describe("Table sorting", () => {
     expect(screen.getAllByRole("row")[1]).toHaveTextContent("A");
   });
 });
+
+describe("Table custom cell render", () => {
+  it("uses the custom render function", () => {
+    render(<Table data={[{ id: 1, name: "A" }]} columns={[{ key: "name", header: "Name", render: (r) => <strong>{r.name}</strong> }]} rowKey={(r) => r.id} />);
+    expect(screen.getByText("A")).toBeInTheDocument();
+  });
+});
