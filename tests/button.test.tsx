@@ -102,3 +102,10 @@ describe("Button full width modifier", () => {
     expect(screen.getByRole("button")).toHaveClass("fui-button--full");
   });
 });
+
+describe("renders leading icon", () => {
+  it("renders a leading icon", () => {
+    render(<Button leadingIcon={<span>+</span>}>Add</Button>);
+    expect(screen.getByText("+")).toBeInTheDocument();
+  });
+});
