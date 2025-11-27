@@ -40,3 +40,10 @@ describe("renders offset", () => {
     expect(screen.getByText("B")).toBeInTheDocument();
   });
 });
+
+describe("supports arrow", () => {
+  it("renders an arrow", () => {
+    render(<Tooltip label="x" arrow><button>B</button></Tooltip>);
+    expect(screen.getByRole("button", { name: "B" })).toBeInTheDocument();
+  });
+});
