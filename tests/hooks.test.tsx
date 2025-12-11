@@ -55,3 +55,14 @@ describe("useClickOutside calls handler", () => {
     expect(screen.getByText("x")).toBeInTheDocument();
   });
 });
+
+describe("useMediaQuery matches", () => {
+  it("returns a boolean", () => {
+    function Probe() {
+      const matches = useMediaQuery("(min-width: 1px)");
+      return <span>{String(matches)}</span>;
+    }
+    render(<Probe />);
+    expect(screen.getByText(/true|false/)).toBeInTheDocument();
+  });
+});
