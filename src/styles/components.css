@@ -448,3 +448,11 @@
 .fui-spinner {
   will-change: transform;
 }
+
+.fui-button__icon {
+  display: inline-flex;
+  align-items: center;
+}
+.fui-button__icon + * {
+  margin-left: 8px;
+}
