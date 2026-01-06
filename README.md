@@ -111,6 +111,12 @@ This project uses [Semantic Versioning](https://semver.org/). See
 - React 16 is no longer supported; use React 17 or later.
 - Jest configuration was removed in favor of Vitest. Run `npm test` as before.
 - `ThemeProvider` now defaults to the system color preference.
+
+## Tree-shaking
+
+The ESM build is fully tree-shakable. Importing a single component pulls only
+that component and its dependencies into your bundle. Use named imports for
+the smallest output.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
