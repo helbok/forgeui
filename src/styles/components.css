@@ -456,3 +456,11 @@
 .fui-button__icon + * {
   margin-left: 8px;
 }
+
+.fui-tooltip__arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--fui-color-text);
+  transform: rotate(45deg);
+}
