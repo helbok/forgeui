@@ -27,6 +27,7 @@
 [data-theme="dark"] {
   --fui-color-primary: #818cf8;
   --fui-color-primary-hover: #6366f1;
+  --fui-color-primary-active: #a5b4fc;
   --fui-color-background: #0f172a;
   --fui-color-surface: #1e293b;
   --fui-color-border: #334155;
