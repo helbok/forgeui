@@ -38,3 +38,10 @@ describe("Select labelled by label", () => {
     expect(screen.getByText("Country")).toBeInTheDocument();
   });
 });
+
+describe("supports error prop", () => {
+  it("marks errored selects", () => {
+    render(<Select error />);
+    expect(screen.getByRole("combobox")).toHaveAttribute("aria-invalid", "true");
+  });
+});
