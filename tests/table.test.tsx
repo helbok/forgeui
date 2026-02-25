@@ -49,3 +49,10 @@ describe("Table custom cell render", () => {
     expect(screen.getByText("A")).toBeInTheDocument();
   });
 });
+
+describe("supports caption", () => {
+  it("renders a caption", () => {
+    render(<Table data={data} columns={[{ key: "name", header: "Name" }]} rowKey={(r) => r.id} caption="Users" />);
+    expect(screen.getByText("Users")).toBeInTheDocument();
+  });
+});
