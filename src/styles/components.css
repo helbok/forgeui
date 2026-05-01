@@ -464,3 +464,8 @@
   background: var(--fui-color-text);
   transform: rotate(45deg);
 }
+
+.fui-tooltip[data-placement="bottom"] .fui-tooltip__content {
+  top: calc(100% + 8px);
+  bottom: auto;
+}
