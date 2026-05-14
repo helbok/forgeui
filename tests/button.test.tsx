@@ -109,3 +109,10 @@ describe("renders leading icon", () => {
     expect(screen.getByText("+")).toBeInTheDocument();
   });
 });
+
+describe("Button danger variant", () => {
+  it("applies the danger class", () => {
+    render(<Button variant="danger">Delete</Button>);
+    expect(screen.getByRole("button")).toHaveClass("fui-button--danger");
+  });
+});
