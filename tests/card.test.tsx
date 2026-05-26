@@ -30,3 +30,10 @@ describe("renders actions", () => {
     expect(screen.getByRole("button", { name: "Go" })).toBeInTheDocument();
   });
 });
+
+describe("Card as link", () => {
+  it("renders as a link element", () => {
+    render(<Card as="a" href="#">Link</Card>);
+    expect(screen.getByRole("link")).toHaveTextContent("Link");
+  });
+});
