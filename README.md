@@ -117,6 +117,11 @@ This project uses [Semantic Versioning](https://semver.org/). See
 The ESM build is fully tree-shakable. Importing a single component pulls only
 that component and its dependencies into your bundle. Use named imports for
 the smallest output.
+
+## Maintainers
+
+forgeui is maintained as part of a synthetic educational exercise. Contributions
+are welcome under the terms of [CONTRIBUTING.md](CONTRIBUTING.md).
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
