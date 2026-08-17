@@ -116,3 +116,10 @@ describe("Button danger variant", () => {
     expect(screen.getByRole("button")).toHaveClass("fui-button--danger");
   });
 });
+
+describe("renders small size", () => {
+  it("supports sm", () => {
+    render(<Button size="sm">S</Button>);
+    expect(screen.getByRole("button")).toHaveClass("fui-button--sm");
+  });
+});
