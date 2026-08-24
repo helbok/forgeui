@@ -47,3 +47,10 @@ describe("supports arrow", () => {
     expect(screen.getByRole("button", { name: "B" })).toBeInTheDocument();
   });
 });
+
+describe("supports controlled open", () => {
+  it("respects the open prop", () => {
+    render(<Tooltip label="x" open><button>B</button></Tooltip>);
+    expect(screen.getByText("x")).toBeInTheDocument();
+  });
+});
