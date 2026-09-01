@@ -66,3 +66,15 @@ describe("useMediaQuery matches", () => {
     expect(screen.getByText(/true|false/)).toBeInTheDocument();
   });
 });
+
+describe("useMediaQuery subscribes", () => {
+  it("calls matchMedia", () => {
+    const spy = jest.spyOn(window, "matchMedia");
+    function Probe() {
+      useMediaQuery("(min-width: 1px)");
+      return null;
+    }
+    render(<Probe />);
+    expect(spy).toHaveBeenCalled();
+  });
+});
