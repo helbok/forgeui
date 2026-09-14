@@ -37,3 +37,10 @@ describe("Card as link", () => {
     expect(screen.getByRole("link")).toHaveTextContent("Link");
   });
 });
+
+describe("supports hover", () => {
+  it("renders hoverable card", () => {
+    render(<Card hover>C</Card>);
+    expect(screen.getByText("C")).toHaveClass("fui-card--hover");
+  });
+});
