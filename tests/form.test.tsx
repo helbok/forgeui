@@ -39,3 +39,10 @@ describe("renders error message", () => {
     expect(screen.getByText("Required")).toBeInTheDocument();
   });
 });
+
+describe("supports reset", () => {
+  it("renders a reset button", () => {
+    render(<Form><button type="reset">R</button></Form>);
+    expect(screen.getByRole("button", { name: "R" })).toBeInTheDocument();
+  });
+});
