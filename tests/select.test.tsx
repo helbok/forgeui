@@ -45,3 +45,10 @@ describe("supports error prop", () => {
     expect(screen.getByRole("combobox")).toHaveAttribute("aria-invalid", "true");
   });
 });
+
+describe("supports grouped options", () => {
+  it("renders option groups", () => {
+    render(<Select><optgroup label="G"><option value="a">A</option></optgroup></Select>);
+    expect(screen.getByRole("group")).toBeInTheDocument();
+  });
+});
