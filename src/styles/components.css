@@ -469,3 +469,8 @@
   top: calc(100% + 8px);
   bottom: auto;
 }
+
+.fui-button--sm {
+  min-height: 30px;
+  font-size: 13px;
+}
