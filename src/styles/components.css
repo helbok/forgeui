@@ -474,3 +474,7 @@
   min-height: 30px;
   font-size: 13px;
 }
+
+.fui-tooltip {
+  max-width: 320px;
+}
