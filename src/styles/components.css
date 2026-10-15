@@ -488,3 +488,8 @@
 .fui-button--rounded {
   border-radius: var(--fui-radius-full);
 }
+
+.fui-form-field__label {
+  font-weight: 500;
+  font-size: 13px;
+}
