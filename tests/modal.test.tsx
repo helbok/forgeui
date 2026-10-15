@@ -43,3 +43,10 @@ describe("Modal footer", () => {
     expect(screen.getByRole("button", { name: "OK" })).toBeInTheDocument();
   });
 });
+
+describe("renders with data-testid", () => {
+  it("accepts data-testid", () => {
+    render(<Modal open onClose={() => {}} data-testid="modal">B</Modal>);
+    expect(screen.getByTestId("modal")).toBeInTheDocument();
+  });
+});
