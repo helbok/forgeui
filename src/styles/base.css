@@ -27,3 +27,8 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
+::selection {
+  background: var(--fui-color-primary);
+  color: #fff;
+}
