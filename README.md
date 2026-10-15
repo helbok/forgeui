@@ -122,6 +122,12 @@ the smallest output.
 
 forgeui is maintained as part of a synthetic educational exercise. Contributions
 are welcome under the terms of [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Accessibility testing
+
+Run the test suite with the `a11y` coverage reporters enabled to surface common
+issues. Manual testing with a screen reader is still recommended before major
+releases.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
