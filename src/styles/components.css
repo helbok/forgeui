@@ -478,3 +478,9 @@
 .fui-tooltip {
   max-width: 320px;
 }
+
+.fui-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
