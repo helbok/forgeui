@@ -34,3 +34,10 @@ describe("Badge subtle variant", () => {
     expect(screen.getByText("ok")).toHaveClass("fui-badge--neutral");
   });
 });
+
+describe("renders uppercase", () => {
+  it("supports uppercase", () => {
+    render(<Badge uppercase>u</Badge>);
+    expect(screen.getByText("u")).toHaveClass("fui-badge--uppercase");
+  });
+});
