@@ -484,3 +484,7 @@
   flex-direction: column;
   gap: 4px;
 }
+
+.fui-button--rounded {
+  border-radius: var(--fui-radius-full);
+}
