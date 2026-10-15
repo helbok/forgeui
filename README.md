@@ -128,6 +128,11 @@ are welcome under the terms of [CONTRIBUTING.md](CONTRIBUTING.md).
 Run the test suite with the `a11y` coverage reporters enabled to surface common
 issues. Manual testing with a screen reader is still recommended before major
 releases.
+
+## Examples
+
+See [examples.md](examples.md) for end-to-end usage and
+[customization.md](customization.md) for theming recipes.
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
