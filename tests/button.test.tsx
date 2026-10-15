@@ -123,3 +123,10 @@ describe("renders small size", () => {
     expect(screen.getByRole("button")).toHaveClass("fui-button--sm");
   });
 });
+
+describe("renders with data-testid", () => {
+  it("accepts data-testid", () => {
+    render(<Button data-testid="save">Save</Button>);
+    expect(screen.getByTestId("save")).toBeInTheDocument();
+  });
+});
