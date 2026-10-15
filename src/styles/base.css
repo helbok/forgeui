@@ -32,3 +32,7 @@ textarea {
   background: var(--fui-color-primary);
   color: #fff;
 }
+
+:focus-visible {
+  outline-color: var(--fui-color-primary);
+}
